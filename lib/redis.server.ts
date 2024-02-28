@@ -268,9 +268,11 @@ export class RedisStreamStrategy
       // if BLOCK time ended, and results are null, listen again.
       if (!results) return this.listenOnStreams();
 
-      const [key, messages] = results[0];
+      for (let result of results) {
+        let [stream, messages] = result;
 
-      await this.notifyHandlers(key, messages);
+        await this.notifyHandlers(stream, messages);
+      }
 
       return this.listenOnStreams();
     } catch (error) {

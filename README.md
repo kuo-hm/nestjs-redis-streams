@@ -1,4 +1,4 @@
-# @tamimaj/nestjs-redis-streams
+# @kuo-hm/nestjs-redis-streams
 
 <p align="center">
   <a href="http://nestjs.com/" target="blank">
@@ -13,12 +13,12 @@
 
 <div align="center">
 
-![Codecov](https://img.shields.io/codecov/c/github/tamimaj/nestjs-redis-streams?color=green)
-![npm](https://img.shields.io/npm/dt/@tamimaj/nestjs-redis-streams)
-![npm](https://img.shields.io/npm/v/@tamimaj/nestjs-redis-streams)
-![GitHub issues](https://img.shields.io/github/issues-raw/tamimaj/nestjs-redis-streams)
-![GitHub Repo stars](https://img.shields.io/github/stars/tamimaj/nestjs-redis-streams?style=social)
-![GitHub forks](https://img.shields.io/github/forks/tamimaj/nestjs-redis-streams?style=social)
+![Codecov](https://img.shields.io/codecov/c/github/kuo-hm/nestjs-redis-streams?color=green)
+![npm](https://img.shields.io/npm/dt/@kuo-hm/nestjs-redis-streams)
+![npm](https://img.shields.io/npm/v/@kuo-hm/nestjs-redis-streams)
+![GitHub issues](https://img.shields.io/github/issues-raw/kuo-hm/nestjs-redis-streams)
+![GitHub Repo stars](https://img.shields.io/github/stars/kuo-hm/nestjs-redis-streams?style=social)
+![GitHub forks](https://img.shields.io/github/forks/kuo-hm/nestjs-redis-streams?style=social)
 
 </div>
 
@@ -55,13 +55,13 @@
 ### with npm
 
 ```sh
-npm install --save @tamimaj/nestjs-redis-streams
+npm install --save @kuo-hm/nestjs-redis-streams
 ```
 
 ### with yarn
 
 ```sh
-yarn add @tamimaj/nestjs-redis-streams
+yarn add @kuo-hm/nestjs-redis-streams
 ```
 
 <br>
@@ -79,7 +79,7 @@ yarn add @tamimaj/nestjs-redis-streams
 ```ts
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
-import { RedisStreamStrategy } from '@tamimaj/nestjs-redis-streams';
+import { RedisStreamStrategy } from '@kuo-hm/nestjs-redis-streams';
 
 async function bootstrap() {
   const app = await NestFactory.createMicroservice(AppModule, {
@@ -97,7 +97,7 @@ async function bootstrap() {
         block: 5000,
         consumer: 'users-1',
         consumerGroup: 'users',
-        deleteMessagesAfterAck: true,  // optional: delete message from stream
+        deleteMessagesAfterAck: true, // optional: delete message from stream
       },
       // optional. See our example main.ts file for more details...
       // serialization: {},
@@ -122,7 +122,7 @@ import {
   RedisStreamHandler,
   StreamResponse,
   RedisStreamContext,
-} from '@tamimaj/nestjs-redis-streams';
+} from '@kuo-hm/nestjs-redis-streams';
 
 export class UsersEventHandlers {
   @RedisStreamHandler('users:create') // stream name.
@@ -183,7 +183,7 @@ In your app.module.ts or any other module you want to use the client to publish 
 
 ```ts
 import { Module } from '@nestjs/common';
-import { RedisStreamClientModule } from '@tamimaj/nestjs-redis-streams';
+import { RedisStreamClientModule } from '@kuo-hm/nestjs-redis-streams';
 
 @Module({
   imports: [
@@ -207,7 +207,7 @@ In your app.module.ts or any other module you want to use the client to publish 
 
 ```ts
 import { Module } from '@nestjs/common';
-import { RedisStreamClientModule } from '@tamimaj/nestjs-redis-streams';
+import { RedisStreamClientModule } from '@kuo-hm/nestjs-redis-streams';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 
 @Module({
@@ -241,7 +241,7 @@ In your service or controller:
 
 ```ts
 import { Controller, Get } from '@nestjs/common';
-import { RedisStreamClient } from '@tamimaj/nestjs-redis-streams';
+import { RedisStreamClient } from '@kuo-hm/nestjs-redis-streams';
 import { lastValueFrom } from 'rxjs';
 
 @Controller()
@@ -274,7 +274,7 @@ In your service or controller:
 
 ```ts
 import { Controller, Get } from '@nestjs/common';
-import { RedisStreamClient } from '@tamimaj/nestjs-redis-streams';
+import { RedisStreamClient } from '@kuo-hm/nestjs-redis-streams';
 
 @Controller()
 export class AppController {
@@ -368,7 +368,7 @@ MIT
 
 ## Author
 
-<a href="https://github.com/tamimaj/" >Tamim Abbas Aljuratli</a>
+<a href="https://github.com/kuo-hm/" >Tamim Abbas Aljuratli</a>
 
 ## Co-author
 
