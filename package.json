@@ -1,8 +1,7 @@
 {
-  "name": "@kuo-hm/nestjs-redis-streams",
-  "version": "1.0.3",
+  "name": "@hmoura_oussama/nestjs-redis-streams",
+  "version": "0.0.1",
   "description": "Redis Streams Transport for NestJS.",
-  "author": "Tamim Abbas Aljuratli <https://tamim.es>",
   "private": false,
   "license": "MIT",
   "main": "dist/index.js",
@@ -19,7 +18,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/kuo-hm/nestjs-redis-streams.git"
+    "url": "https://github.com/hmoura_oussama/nestjs-redis-streams.git"
   },
   "keywords": [
     "nest",
@@ -32,10 +31,7 @@
     "nest redis streams strategy",
     "nest redis streams transport"
   ],
-  "bugs": {
-    "url": "https://github.com/kuo-hm/nestjs-redis-streams/issues"
-  },
-  "homepage": "https://github.com/kuo-hm/nestjs-redis-streams#readme",
+  "homepage": "https://github.com/hmoura_oussama/nestjs-redis-streams#readme",
   "dependencies": {
     "@nestjs/common": "^9.0.0",
     "@nestjs/microservices": "^9.0.0",
