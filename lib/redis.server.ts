@@ -1,4 +1,4 @@
-import { Server, CustomTransportStrategy } from '@nestjs/microservices';
+import { CustomTransportStrategy, Server } from '@nestjs/microservices';
 import {
   ConstructorOptions,
   RedisInstance,
@@ -7,11 +7,11 @@ import {
   StreamResponseObject,
 } from './interfaces';
 
-import { createRedisConnection } from './redis.utils';
 import { CONNECT_EVENT, ERROR_EVENT } from '@nestjs/microservices/constants';
-import { deserialize, serialize } from './streams.utils';
-import { RedisStreamContext } from './stream.context';
 import { Observable } from 'rxjs';
+import { createRedisConnection } from './redis.utils';
+import { RedisStreamContext } from './stream.context';
+import { deserialize, serialize } from './streams.utils';
 
 export class RedisStreamStrategy
   extends Server
